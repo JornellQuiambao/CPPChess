@@ -2,6 +2,8 @@
 #define BOARD_H
 
 #include <iostream>
+#include <unordered_map>
+#include <tuple>
 
 using namespace std;
 
@@ -36,6 +38,8 @@ struct AllChessPieces {
     WhitePieces White;
     BlackPieces Black;
 };
+
+static unordered_map <string, tuple<int,int>> ChessMap;
 
 void initializeBoard(ChessPiece board[][BOARD_SIZE]);
 
