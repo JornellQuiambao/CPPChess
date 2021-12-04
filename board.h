@@ -39,12 +39,14 @@ struct AllChessPieces {
     BlackPieces Black;
 };
 
-static unordered_map <string, tuple<int,int>> ChessMap;
-
 void initializeBoard(ChessPiece board[][BOARD_SIZE]);
 
 void printBoard(ChessPiece board[][BOARD_SIZE]);
 
 void whiteInput(void);
+
+typedef unordered_map<string, pair<int,int>> positionMap;
+
+void fillMap (positionMap &tempMap);
 
 #endif
