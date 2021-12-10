@@ -41,6 +41,10 @@ struct AllChessPieces {
 
 void initializeBoard(ChessPiece board[][BOARD_SIZE]);
 
+void modifyBoard(ChessPiece board[][BOARD_SIZE], ChessPiece newPiece, int x, int y);
+
+ChessPiece getBoard(ChessPiece board[][BOARD_SIZE], int x, int y);
+
 void printBoard(ChessPiece board[][BOARD_SIZE]);
 
 void whiteInput(void);

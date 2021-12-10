@@ -47,6 +47,15 @@ void initializeBoard(ChessPiece board[][BOARD_SIZE])
     }
 }
 
+void modifyBoard(ChessPiece board[][BOARD_SIZE], ChessPiece newPiece, int x, int y) {
+    board[x][y] = newPiece;
+}
+
+ChessPiece getBoard(ChessPiece board[][BOARD_SIZE], int x, int y)
+{
+    return board[x][y];
+}
+
 void printBoard(ChessPiece board[][BOARD_SIZE])
 {
     for(int i=0;i<BOARD_SIZE;i++) {
