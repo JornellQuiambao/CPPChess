@@ -15,6 +15,15 @@ struct ChessPiece {
     bool isWhite;
 };
 
+/* -----------------------------------------
+ * createChessPiece()
+ * -----------------------------------------
+ * Desc:    Creates ChessPiece object from struct
+ * Args:    string name of piece
+ *          char symbol of piece
+ *          bool determine if piece is white/black
+ * Return:  ChessPiece
+ */
 ChessPiece createChessPiece(string name, char symbol, bool isWhite);
 
 struct AllChessPieces {
@@ -39,15 +48,46 @@ struct AllChessPieces {
     BlackPieces Black;
 };
 
+/* -----------------------------------------
+ * initializeBoard()
+ * -----------------------------------------
+ * Desc:    Initializes given board to standard chessboard
+ * Args:    pointer to board
+ * Return:  (none)
+ */
 void initializeBoard(ChessPiece board[][BOARD_SIZE]);
 
+/* -----------------------------------------
+ * modifyBoard()
+ * -----------------------------------------
+ * Desc:    Modifies the current chessboard with given position and new piece
+ * Args:    pointer to board
+ *          new ChessPiece object
+ *          position int x
+ *          position int y
+ * Return:  (none)
+ */
 void modifyBoard(ChessPiece board[][BOARD_SIZE], ChessPiece newPiece, int x, int y);
 
+/* -----------------------------------------
+ * getBoard()
+ * -----------------------------------------
+ * Desc:    Returns current piece of chessboard at given position
+ * Args:    pointer to board
+ *          position int x
+ *          position int y
+ * Return:  ChessPiece
+ */
 ChessPiece getBoard(ChessPiece board[][BOARD_SIZE], int x, int y);
 
+/* -----------------------------------------
+ * printBoard()
+ * -----------------------------------------
+ * Desc:    Prints current state of chessboard to stdout
+ * Args:    pointer to board
+ * Return:  (none)
+ */
 void printBoard(ChessPiece board[][BOARD_SIZE]);
-
-void whiteInput(void);
 
 typedef unordered_map<string, pair<int,int>> positionMap;
 

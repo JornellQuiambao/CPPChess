@@ -66,13 +66,6 @@ void printBoard(ChessPiece board[][BOARD_SIZE])
     }
 }
 
-void whiteInput(void)
-{
-    string move;
-    cout << "White's Turn: ";
-    cin >> move;
-}
-
 void fillMap (positionMap &tempMap)
 {
     string coords[8][8] = {{"A8","B8","C8","D8","E8","F8","G8","H8"},
